@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* configuração gerais */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{ 
+    display: flex;
+    justify-content: center;  
+   
+    width: 100vw;
+    height: 100vh;
+
+    background-image: linear-gradient(to right,rgb(241, 84, 136),rgb(248, 108, 103),rgb(248, 168, 130));
+}
+
+/* main,h2 */
+main{
+    width: 80%;
+    height: 80%;
+    max-width: 750px;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+}
+h2{
+    margin: 10px 0px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+/* estilo do formulario */
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 45px;
+}
+#idtare{
+    height: 97%;
+    width: 80%;
+    border: 1.3px solid rgb(51, 4, 126);
+    color: rgb(51, 4, 126) ;
+    font-size: 16px;
+}
+#idtare::placeholder{
+    color: rgb(51, 4, 126) ;
+}
+
+button{
+    height: 100%;
+    width: 12%;
+    border: 1.3px solid rgb(51, 4, 126);
+    background-color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    color: rgb(51, 4, 126);
+}
+button:hover{
+    background-color: rgb(51, 4, 126);
+    color: white;
+}
+
+ion-icon{
+    font-size: 25px;
+}
+
+
+/* lista de tarefas */
+#tare-list{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column; 
+    height: 25%; 
+    width: 100%;
+}
+
+#tare-list-container{
+    height: 25%;
+    widows: 100%;
+    padding: 10px;
+    
+}
+
+#tare-list li{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgb(255, 252, 252);
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(51, 4, 126);
+    margin-bottom: 10px;
+    border: 1.3px solid rgb(51, 4, 126);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.733);
+    list-style-type: none;   
+
+    transition: 0.5s;
+}
+
+ li ion-icon{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: .5s;
+    cursor: pointer;
+    width: 30px;
+}
+.add-btn{
+    right: 40px;
+}
+.add-btn:hover{
+ background-color: rgb(150, 250, 0);
+
+}
+
+.close-btn{
+    right: 0px;
+}
+.close-btn:hover{
+    background-color: red;
+}
+
+.hide{
+    display: none;
+}
+#tare-list li.done{
+    background-color: rgb(51, 4, 126);
+    color: white;
+    text-decoration: line-through;
+}
